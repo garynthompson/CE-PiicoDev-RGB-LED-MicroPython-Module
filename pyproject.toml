@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "PiicoDev-RGB"
+version = "1.10.1"
+description = "Drivers for the PiicoDev ecosystem of sensors and modules"
+authors = ["Core Electronics <production.inbox@coreelectronics.com.au>"]
+license = "MIT"
+readme = "README.md"
+classifiers=[
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: Implementation :: MicroPython",
+        "License :: OSI Approved :: MIT License",
+    ]
+
+packages = [
+    { include = "PiicoDev_RGB.py" }
+]
+
+[project.urls]
+Homepage = "https://github.com/CoreElectronics/CE-PiicoDev-RGB-LED-MicroPython-Module"
+Documentation = "https://core-electronics.com.au/guides/raspberry-pi-pico/piicodev-rgb-led-module-raspberry-pi-pico-guide/"
+Repository = "https://github.com/CoreElectronics/CE-PiicoDev-RGB-LED-MicroPython-Module"
+Issues = "https://github.com/CoreElectronics/CE-PiicoDev-RGB-LED-MicroPython-Module/issues"
+#Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.12"
+
+PiicoDev_Unified = { git = "https://github.com/garynthompson/CE-PiicoDev-Unified.git", branch = "main" }
+
+
+[tool.poetry.group.dev.dependencies]
+python-minifier = "^2.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
